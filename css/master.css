@@ -1,0 +1,167 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    font-size: 13px;
+    font-family: "Barlow Semi Condensed" , sans-serif;
+}
+:root {
+    --p1: hsl(263, 55%, 52%);
+    --p2: hsl(217, 19%, 35%);
+    --p3: hsl(219, 29%, 14%);
+    --p4: hsl(0, 0%, 100%);
+    --n1: hsl(0, 0%, 81%);
+    --n2: hsl(210, 46%, 95%);
+}
+body {
+    background-color: var(--n2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    margin: 0 150px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:30px;
+}
+header .card {
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+header .card .image {
+    display: grid;
+    grid-template-columns: 1fr 11fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    margin-bottom: 20px;
+}
+header .card .image img {
+    border-radius: 50%;
+    width: 30px;
+    grid-row: 1/3;
+    margin-right: 20px;
+}
+header .card .image .name {
+    color:var(--n2);
+}
+header .card .image .Graduate {
+    color: var(--n2);
+    opacity: 50%;
+    font-size: 0.9em;
+}
+header .card h1 {
+    color: var(--n2);
+    font-weight: 700;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+header .card .text {
+    color: var(--n2);
+    opacity: 70%;
+}
+header .one {
+    background-color: var(--p1);
+    grid-column: 1/3;
+    position: relative;
+    z-index: 1;
+}
+header .one .qu {
+    position: absolute;
+    top:0;
+    right: 20%;
+    z-index: -1;
+}
+header .one .image img {
+    border: 2px solid hsl(0deg 0% 81% / 50%)
+
+}
+header .two {
+    background-color: var(--p2);
+}
+header .three {
+    background-color: var(--p4);
+}
+header .three .image .name {
+    color: var(--p2);
+}
+header .three .image .Graduate {
+    color: var(--p2);
+    opacity: 50%;
+}
+header .three h1 {
+    color: var(--p2);
+}
+header .three .text {
+    color:var(--p2);
+    opacity: 70%;
+}
+header .four {
+    background-color: var(--p3);
+    grid-column: 2/4;
+}
+header .four .image img {
+    border: 2px solid var(--p1)
+
+}
+.five {
+    background-color: var(--p4);
+    grid-row: 1/3;
+    grid-column: 4/4; 
+}
+header .five .image .name {
+    color: var(--p2);
+}
+header .five .image .Graduate {
+    color: var(--p2);
+    opacity: 50%;
+}
+header .five h1 {
+    color: var(--p2);
+}
+header .five .text {
+    color: var(--p2);
+    opacity: 70%;
+}
+@media screen and (max-width:1300px) {
+    header .five {
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+    header .four {
+        grid-column: 1/3;
+    }
+}
+@media screen and (max-width:1200px) {
+    header {
+        margin: 0 100px;
+    }
+    header .two {
+        grid-column: 3/5;
+    }
+    header .three {
+        grid-column: 1/3;
+    }
+    header .four {
+        grid-column: 3/5;
+        grid-row: 2/3;
+    }
+    header .five {
+        grid-row: 3/4;
+        grid-column: 1/5;
+    }
+}
+@media screen and (max-width:950px) {
+    header {
+        margin: 0 50px;
+    }
+}
+@media screen and (max-width:750px) {
+    header {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
